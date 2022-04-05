@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GudangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/', [HomeController::class, 'index']);
+
+Route::prefix('barang')->group(function () {
+    Route::get('/', [GudangController::class, 'index']);
+    Route::get('/index', [GudangController::class, 'index']);
+    Route::get('/edit', [GudangController::class, 'edit']);
+    Route::get('/add', [GudangController::class, 'add']);
 });
