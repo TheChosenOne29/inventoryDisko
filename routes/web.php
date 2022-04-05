@@ -21,5 +21,6 @@ Route::prefix('barang')->group(function () {
     Route::get('/', [GudangController::class, 'index']);
     Route::get('/index', [GudangController::class, 'index']);
     Route::get('/edit', [GudangController::class, 'edit']);
-    Route::get('/add', [GudangController::class, 'add']);
+    Route::get('/add', [GudangController::class, 'add']); 
+    Route::post('/store', [GudangController::class, 'store']); 
 });
