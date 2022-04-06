@@ -11,30 +11,51 @@ class GudangController extends Controller
 {
     public function index()
     {
-        return view('barang.index', [
+        return view('/barang/index', [
             'dataBarang' => Gudang::all()
         ]);
     }
 
     public function add()
     {
-        return view ('barang.add');
+        return view ('/barang/add');
     }
 
-    public function edit()
+    // public function edit(Request $request, $id)
+    // {
+    //     $gudang = Gudang::find($id);
+
+    //     $gudang->update([
+    //         'no_urut' => $request -> no_urut,
+    //         'tanggal' => $request -> tanggal,
+    //         'nama' => $request -> nama,
+    //         'kondisi' => $request -> kondisi
+    //     ]);
+    // }
+
+    public function edit($id)
     {
-        return view ('barang.edit');
+        return view('barang.edit', [
+            'data_gudang' => Gudang::find($id)
+        ]);
     }
 
     public function store(Request $request)
     {
-        DB::table('gudangs') -> insert([
+        Gudang::create([
             'no_urut' => $request -> no_urut,
             'tanggal' => $request -> tanggal,
             'nama' => $request -> nama,
             'kondisi' => $request -> kondisi
         ]);
 
-        return view('barang.add');
+        return redirect('/barang/add');
+    }
+
+    public function erase($id)
+    {
+        Gudang::destroy($id);
+
+        return redirect('barang');
     }
 }

@@ -9,8 +9,8 @@
         {{ csrf_field() }}
     
         <div class="mt-3 mb-3">
-          <label for="form2" class="form-label">Nomor Urut</label>
-          <input class="form-control" id="form2" type="number" name="no_urut">
+          <label for="form2" class="form-label">Nomor Registrasi</label>
+          <input class="form-control" id="form2" type="number" name="no_reg">
         </div>
     
         <div class="mb-3">
