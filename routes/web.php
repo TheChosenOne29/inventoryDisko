@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GudangController;
 
 /*
@@ -16,7 +17,10 @@ use App\Http\Controllers\GudangController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/login', [HomeController::class, 'login']);
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'auth']);
+Route::post('/logout', [LoginController::class, 'logOut']);
 
 Route::prefix('barang')->group(function () {
     Route::get('/', [GudangController::class, 'index']);
