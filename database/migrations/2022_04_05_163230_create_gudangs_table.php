@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('tanggal');
             $table->string('nama');
             $table->string('kondisi');
+            $table->integer('jumlah');
         });
     }
 

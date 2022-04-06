@@ -13,6 +13,7 @@ class Gudang extends Model
         'no_reg',
         'tanggal',
         'nama',
-        'kondisi'
+        'kondisi',
+        'jumlah'
     ];
 }

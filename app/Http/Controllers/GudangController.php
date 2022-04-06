@@ -46,7 +46,8 @@ class GudangController extends Controller
             'no_reg' => $request -> no_reg,
             'tanggal' => $request -> tanggal,
             'nama' => $request -> nama,
-            'kondisi' => $request -> kondisi
+            'kondisi' => $request -> kondisi,
+            'jumlah' => $request -> jumlah
         ]);
 
         return redirect('/barang/add');
