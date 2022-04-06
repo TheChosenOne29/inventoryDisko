@@ -16,6 +16,7 @@ use App\Http\Controllers\GudangController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/login', [HomeController::class, 'login']);
 
 Route::prefix('barang')->group(function () {
     Route::get('/', [GudangController::class, 'index']);
@@ -23,6 +24,5 @@ Route::prefix('barang')->group(function () {
     Route::get('/add', [GudangController::class, 'add']);
     Route::get('/erase/{id}', [GudangController::class, 'erase']);
     Route::get('/edit/{id}', [GudangController::class, 'edit']);
-    
     Route::post('/store', [GudangController::class, 'store']);
 });
