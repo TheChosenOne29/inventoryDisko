@@ -27,9 +27,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="/barang/add">Add</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/barang/edit">Edit</a>
-              </li>
             </ul>
           </div>
         </div>

@@ -43,7 +43,7 @@ class GudangController extends Controller
     public function store(Request $request)
     {
         Gudang::create([
-            'no_urut' => $request -> no_urut,
+            'no_reg' => $request -> no_reg,
             'tanggal' => $request -> tanggal,
             'nama' => $request -> nama,
             'kondisi' => $request -> kondisi
