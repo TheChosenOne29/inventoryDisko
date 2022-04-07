@@ -14,8 +14,8 @@
         </div>
     
         <div class="mb-3">
-            <label for="form3" class="form-label">Tanggal Masuk</label>
-            <input class="form-control" id= "form3" type="date" name="tanggal">
+            <label for="form3" class="form-label">Tahun</label>
+            <input class="form-control" id= "form3" type="number" min="2000" max="2099" step="1" value="2022" name="tahun">
           </div>
     
         <div class="mb-3">

@@ -14,8 +14,8 @@
         </div>
     
         <div class="mb-3">
-            <label for="form3" class="form-label">Tanggal Masuk</label>
-            <input class="form-control" id= "form3" type="date" name="tanggal" value="{{ $data_gudang->tanggal }}">
+            <label for="form3" class="form-label">Tahun</label>
+            <input class="form-control" id= "form3" type="year" name="tahun" value="{{ $data_gudang->tahun }}">
           </div>
     
         <div class="mb-3">

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('no_reg');
-            $table->date('tanggal');
+            $table->year('tahun');
             $table->string('nama');
             $table->string('kondisi');
             $table->integer('jumlah');

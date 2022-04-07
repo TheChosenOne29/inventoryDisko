@@ -44,7 +44,7 @@ class GudangController extends Controller
     {
         Gudang::create([
             'no_reg' => $request -> no_reg,
-            'tanggal' => $request -> tanggal,
+            'tahun' => $request -> tahun,
             'nama' => $request -> nama,
             'kondisi' => $request -> kondisi,
             'jumlah' => $request -> jumlah

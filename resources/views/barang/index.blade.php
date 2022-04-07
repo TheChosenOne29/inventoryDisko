@@ -6,7 +6,7 @@
     <thead>
       <tr>
         <th scope="col">No Registrasi</th>
-        <th scope="col">Tanggal</th>
+        <th scope="col">Tahun</th>
         <th scope="col">Nama</th>
         <th scope="col">Kondisi</th>
         <th scope="col">Aksi</th>
@@ -16,7 +16,7 @@
         @foreach ($dataBarang as $item)
     <tr>
         <td>{{$item -> no_reg}} </td>
-        <td>{{$item -> tanggal}} </td>
+        <td>{{$item -> tahun}} </td>
         <td>{{$item -> nama}} </td>
         <td>{{$item -> kondisi}} </td>
         <td>

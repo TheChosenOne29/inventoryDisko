@@ -11,7 +11,7 @@ class Gudang extends Model
 
     protected $fillable = [
         'no_reg',
-        'tanggal',
+        'tahun',
         'nama',
         'kondisi',
         'jumlah'
