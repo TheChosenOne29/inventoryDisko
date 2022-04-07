@@ -30,5 +30,5 @@ Route::prefix('barang')->middleware('auth')->group(function () {
     Route::get('/erase/{id}', [GudangController::class, 'erase']);
     Route::get('/edit/{id}', [GudangController::class, 'edit']);
     Route::post('/store', [GudangController::class, 'store']);
-    Route::post('/update', [GudangController::class, 'update']);
+    Route::post('/update/{id}', [GudangController::class, 'update']);
 });

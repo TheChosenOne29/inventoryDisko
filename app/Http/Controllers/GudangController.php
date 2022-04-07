@@ -63,7 +63,8 @@ class GudangController extends Controller
             'kondisi' => $request -> kondisi,
             'jumlah' => $request -> jumlah
         ]);
-
+        // return redirect('/barang/index');
+        return redirect()->intended('/barang')->with('success-update', 'Update Data Sukses');
     }
     
     public function erase($id)

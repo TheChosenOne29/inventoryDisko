@@ -5,7 +5,7 @@
 <h1>Ubah Data</h1>
 
 <div class="col-lg-5">
-    <form action="/barang/update" method="POST">
+    <form action="/barang/update/{{ $data_gudang->id }}" method="POST">
         {{ csrf_field() }}
     
         <div class="mt-3 mb-3">
@@ -23,9 +23,14 @@
             <input class="form-control" id= "form1" type="text" name="nama" value=" {{$data_gudang->nama}}">
           </div>
     
-        <div class="mb-5">
+        <div class="mb-3">
             <label for="form4" class="form-label">Kondisi</label>
             <input class="form-control" id= "form4" type="text" name="kondisi" value=" {{$data_gudang->kondisi}} ">
+          </div>
+        
+          <div class="mb-5">
+            <label for="form5" class="form-label">Jumlah Barang</label>
+            <input class="form-control" id="form5" type="number" name="jumlah" value="{{ $data_gudang->jumlah }}">
           </div>
 
           <button type="submit" class="btn btn-primary">Update</button>
