@@ -5,7 +5,7 @@
 <h1>Ubah Data</h1>
 
 <div class="col-lg-5">
-    <form action="/barang/store" method="POST">
+    <form action="/barang/update" method="POST">
         {{ csrf_field() }}
     
         <div class="mt-3 mb-3">

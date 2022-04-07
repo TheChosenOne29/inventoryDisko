@@ -53,6 +53,19 @@ class GudangController extends Controller
         return redirect('/barang/add');
     }
 
+    public function update($id, Request $request)
+    {
+        $gudang = Gudang::find($id);
+        $gudang->update([
+            'no_reg' => $request -> no_reg,
+            'tahun' => $request -> tahun,
+            'nama' => $request -> nama,
+            'kondisi' => $request -> kondisi,
+            'jumlah' => $request -> jumlah
+        ]);
+
+    }
+    
     public function erase($id)
     {
         Gudang::destroy($id);
