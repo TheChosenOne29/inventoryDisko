@@ -50,7 +50,7 @@ class GudangController extends Controller
             'jumlah' => $request -> jumlah
         ]);
 
-        return redirect('/barang/add');
+        return redirect('/barang/index');
     }
 
     public function update($id, Request $request)
