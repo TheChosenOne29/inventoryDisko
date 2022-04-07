@@ -18,11 +18,12 @@ use App\Http\Controllers\GudangController;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'auth']);
-Route::post('/logout', [LoginController::class, 'logOut']);
 
-Route::prefix('barang')->group(function () {
+Route::post('/logout', [LoginController::class, 'logOut'])->middleware('auth');
+
+Route::prefix('barang')->middleware('auth')->group(function () {
     Route::get('/', [GudangController::class, 'index']);
     Route::get('/index', [GudangController::class, 'index']);
     Route::get('/add', [GudangController::class, 'add']);

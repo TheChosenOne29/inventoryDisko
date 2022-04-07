@@ -28,6 +28,16 @@
                 <a class="nav-link" href="/barang/add">Add</a>
               </li>
             </ul>
+            <ul class="navbar-nav ms-auto">
+              @if (auth()->user())
+              <form action="/logout" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
+            @else
+              <a href="/login" class="btn btn-primary">Login</a>
+            @endif
+            </ul>
           </div>
         </div>
       </nav>
