@@ -1,5 +1,9 @@
 @extends('layouts.navbar')
 
+@section('title')
+    Inventaris | Tambah
+@endsection
+
 @section('content')
 
 <h1>Tambah Data</h1>

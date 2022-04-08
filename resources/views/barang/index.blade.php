@@ -1,15 +1,28 @@
 @extends('layouts.navbar')
 
+@section('title')
+    Inventaris | Index
+@endsection
+
 @section('content')
 <h1>Semua Data</h1>
+
 @if (session()->has('success-update'))
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <div class="alert alert-primary" role="alert">
     {{ session('success-update') }}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
   </div>
+
+@elseif (session()->has('success-delete'))
+<div class="alert alert-danger" role="alert">
+  {{ session('success-delete') }}
+</div>
+
+@elseif (session()->has('success-add'))
+<div class="alert alert-success" role="alert">
+  {{ session('success-add') }}
+</div>
 @endif
+
 <table class="table">
     <thead>
       <tr>

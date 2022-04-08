@@ -1,5 +1,9 @@
 @extends('layouts.navbar')
 
+@section('title')
+    Inventaris | Edit
+@endsection
+
 @section('content')
 
 <h1>Ubah Data</h1>

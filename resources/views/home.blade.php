@@ -1,5 +1,9 @@
 @extends('layouts.navbar')
 
+@section('title')
+    Inventaris | Home
+@endsection
+
 @section('content')
 
 <main>

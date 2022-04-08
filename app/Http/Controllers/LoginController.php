@@ -25,7 +25,7 @@ class LoginController extends Controller
             return redirect('/');
         }
 
-        return redirect()->intended('/login')->with('error', 'error login');
+        return redirect()->intended('/login');
     }
 
     public function logOut()

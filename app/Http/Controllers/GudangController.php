@@ -50,7 +50,7 @@ class GudangController extends Controller
             'jumlah' => $request -> jumlah
         ]);
 
-        return redirect('/barang/index');
+        return redirect('/barang/index')->with('success-add', 'Tambah Data Sukses');
     }
 
     public function update($id, Request $request)
@@ -71,6 +71,6 @@ class GudangController extends Controller
     {
         Gudang::destroy($id);
 
-        return redirect('barang');
+        return redirect()->intended('/barang')->with('success-delete', 'Delete Data Sukses');
     }
 }
