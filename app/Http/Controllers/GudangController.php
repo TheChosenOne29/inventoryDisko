@@ -42,6 +42,13 @@ class GudangController extends Controller
 
     public function store(Request $request)
     {
+        if ($request -> kondisi == 1) {
+            $request -> kondisi = 'Baik';
+    
+        } else {
+            $request -> kondisi = 'Rusak';
+        }
+
         Gudang::create([
             'no_reg' => $request -> no_reg,
             'tahun' => $request -> tahun,
@@ -55,6 +62,14 @@ class GudangController extends Controller
 
     public function update($id, Request $request)
     {
+
+        if ($request -> kondisi == 1) {
+            $request -> kondisi = 'Baik';
+    
+        } else {
+            $request -> kondisi = 'Rusak';
+        }
+        
         $gudang = Gudang::find($id);
         $gudang->update([
             'no_reg' => $request -> no_reg,

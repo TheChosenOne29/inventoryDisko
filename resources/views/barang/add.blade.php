@@ -29,7 +29,11 @@
     
         <div class="mb-3">
             <label for="form4" class="form-label">Kondisi</label>
-            <input class="form-control" id= "form4" type="text" name="kondisi">
+            <select class="form-select" id= "form4" type="text" name="kondisi">
+              <option selected></option>
+              <option value="1">Baik</option>
+              <option value="2">Rusak</option>
+            </select>
           </div>
 
         <div class="mb-5">

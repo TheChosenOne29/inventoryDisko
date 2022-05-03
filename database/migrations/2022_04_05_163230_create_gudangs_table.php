@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('gudangs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('no_reg');
+            $table->integer('no_reg')->unique();
             $table->year('tahun');
-            $table->string('nama');
+            $table->string('nama')->unique();
             $table->string('kondisi');
             $table->integer('jumlah');
         });
